@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CellBehaviors",
-    "\\Data",
+    "\\Rules",
     "\\Simulation"
   ],
-  "SelectedNode": "\\Data\\Neighbors.cs",
+  "SelectedNode": "\\Rules\\RuleSet.cs",
   "PreviewInSolutionExplorer": false
 }

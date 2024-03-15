@@ -2,32 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RuleSet 
+/**
+ * This object contains the ruleset being used by dynamic cells.
+ * The editor controls to change the rules should interface with this object.
+ */
+public class RuleSet : MonoBehaviour
 {
-    private static List<Rule> ruleSet;
+    public List<Rule> ruleSet;
 
-    public static void setRuleSet(Rule[] rules)
+    public RuleSet()
+    {
+        ruleSet = new List<Rule>();
+    }
+
+    public void SetRuleSet(Rule[] rules)
     {
         ruleSet = new List<Rule>();
         ruleSet.AddRange(rules);
     }
 
-    public static List<Rule> getRuleSet()
+    public List<Rule> GetRuleSet()
     {
         return ruleSet;
     }
 
     // Convert ArrayList to regular array.
-    public static Rule[] asArray()
+    public Rule[] AsArray()
     {
         return ruleSet.ToArray();
     }
 
-    public static void add(Rule rule)
+    public void Add(Rule rule)
     {
         ruleSet.Add(rule);
     }
-    public static Rule remove(int index)
+    public Rule Remove(int index)
     {
         Rule returnRule = ruleSet[index];
 
@@ -35,39 +44,41 @@ public class RuleSet
 
         return returnRule;
     }
-    public static void remove(Rule rule)
+    public void Remove(Rule rule)
     {
         ruleSet.Remove(rule);
     }
-    public static void moveRule(int ruleIndex, int newIndex)
+    public void MoveRule(int ruleIndex, int newIndex)
     {
         // Ensure ruleIndex is in bounds.
-        if (ruleIndex < 0 || ruleIndex >= size())
+        if (ruleIndex < 0 || ruleIndex >= Size())
             return;
         // Ensure newIndex is in bounds.
         if (newIndex < 0)
             newIndex = 0;
-        else if (newIndex >= size())
-            newIndex = size() - 1;
+        else if (newIndex >= Size())
+            newIndex = Size() - 1;
 
         Rule rule = ruleSet[ruleIndex];
         ruleSet.RemoveAt(ruleIndex);
         ruleSet.Insert(newIndex, rule);
     }
-    public static int size()
+    public int Size()
     {
         return ruleSet.Count;
     }
     // Get all color states mentioned in rules.
-    public static Color[] colorStatesUsedInRules()
+    public Color[] ColorStatesUsedInRules()
     {
         HashSet<Color> states = new HashSet<Color>();
 
         foreach (Rule rule in ruleSet)
         {
-            states.UnionWith(rule.getRelatedColors());
+            states.UnionWith(rule.GetRelatedColors());
         }
         Color[] output = new List<Color>(states).ToArray();
         return output;
     }
+
+   
 }

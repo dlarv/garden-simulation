@@ -22,7 +22,7 @@ using UnityEditor;
 [ExecuteAlways]
 public class Grid : MonoBehaviour
 {
-    static Cell[,] cells = null;
+    Cell[,] cells = null;
     public int gridLength;
     public Cell cell;
     public Cell deadCell;
@@ -43,6 +43,7 @@ public class Grid : MonoBehaviour
     {
         // Reset grid upon exiting Play mode
         ClearGrid();
+        GenerateGrid();
     }
 
     public void GenerateGrid()

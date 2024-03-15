@@ -110,16 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdb2e5c1b3f4224986b25f6c7d88cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neighbors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  color: {r: 1, g: 1, b: 1, a: 0}
-  nextColor: {r: 0, g: 0, b: 0, a: 0}
-  startWhite: 1
-  switchColor: 0
+  color: {r: 1, g: 1, b: 1, a: 1}
+  nextColor: {r: 1, g: 1, b: 1, a: 1}

@@ -20,36 +20,36 @@ public class Rule
         this.result = result;
     }
 
-    public List<Color> getRelatedColors()
+    public List<Color> GetRelatedColors()
     {
         List<Color> colors = new List<Color>();
         colors.Add(result);
 
         foreach (RuleCondition cond in conditions)
         {
-            colors.Add(cond.getColorState());
+            colors.Add(cond.GetColorState());
         }
 
         return colors;
     }
 
-    public RuleCondition[] getConditions()
+    public RuleCondition[] GetConditions()
     {
         return conditions;
     }
 
-    public Color getResult()
+    public Color GetResult()
     {
         return result;
     }
 
-    public Color check(Neighbors neighbors, Color currentColor)
+    public Color? Check(Neighbors neighbors, Color currentColor)
     {
         foreach (RuleCondition cond in conditions)
         {
-            if (!cond.check(neighbors, currentColor))
+            if (!cond.Check(neighbors, currentColor))
             {
-                return currentColor;
+                return null;
             }
         }
         return result;

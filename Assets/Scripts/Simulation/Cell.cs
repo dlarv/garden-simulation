@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 /**
  * This handles functionality related to the GameObject present in the scene tree.
- * This acts as the parent class for CellBehavior scripts 
- * (CellBehaviors should inherit this and implement the ICellBehavior interface). 
+ * This acts as the parent class for CellBehavior scripts (CellBehaviors should inherit this and implement 
+ * the ICellBehavior interface). 
+ * 
+ * To create new rules all that is required is creating a new CellBehavior script and a related prefab.
  */
+
 // This attribute allows for the cell to change color/simulate in both Play and Edit mode.
 [ExecuteAlways]
 public class Cell : MonoBehaviour
@@ -14,6 +17,7 @@ public class Cell : MonoBehaviour
     public ICellBehavior behavior;
     public Color color;
     public Color nextColor;
+    public Color initialColor;
 
     // When a neighboring cell wants to influence this cell's color, it adds its preferred color into this queue. 
     // The ICellBehavior decides if/how to deal with these requests.
@@ -37,6 +41,9 @@ public class Cell : MonoBehaviour
     // Change the gameobject's color.
     public void SetColor(Color col)
     {
+        if (!Application.isPlaying)
+            initialColor = col;
+
         material.SetColor("_Color", col);
         color = col;
     }
@@ -44,6 +51,11 @@ public class Cell : MonoBehaviour
     public void SetNextColor(Color col)
     {
         nextColor = col;
+    }
+    // Set color back to value it was at during edit mode.
+    public void ResetColor()
+    {
+        SetColor(initialColor);
     }
     public Color GetColor()
     {
