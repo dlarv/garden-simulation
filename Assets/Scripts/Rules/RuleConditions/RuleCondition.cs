@@ -1,11 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public abstract class RuleCondition
+[Serializable]
+public class RuleCondition
 {
-    public abstract bool Check(Neighbors neighbors, Color currentColorState);
-    public abstract RelOp GetOp();
-    public abstract Color GetColorState();
+    // Which neighbor(s) to check
+    public int[] targets;
+    public RelOp op;
+    public Color color;
+    public int quantity;
+
+    public bool Check(Neighbors neighbors)
+    {
+        Neighbors n = neighbors.FilterByIndex((index) => Array.IndexOf(targets, index) != -1);
+        n = n.FilterByColor(color);
+        int value = n.Count();
+        return op switch
+        {
+            RelOp.GT => value > quantity,
+            RelOp.GE => value >= quantity,
+            RelOp.LT => value < quantity,
+            RelOp.LE => value <= quantity,
+            RelOp.EQ => value == quantity,
+            _ => value != quantity,
+        };
+    }
+    public virtual bool Check(Neighbors neighbors, Color color) { return false;  }
+    public RelOp GetOp()
+    {
+        return op;
+    }
+    public Color GetColorState()
+    {
+        return color;
+    }
 }
 

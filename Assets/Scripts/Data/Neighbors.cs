@@ -72,7 +72,7 @@ public class Neighbors
 
         for (int i = 0; i < cells.Length; i++)
         {
-            if (cells[i].GetColor() == col)
+            if (cells[i] != null && cells[i].GetColor() == col)
                 filtered[i] = cells[i];
         }
         return new Neighbors(filtered);

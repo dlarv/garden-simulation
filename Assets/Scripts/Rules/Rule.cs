@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+[Serializable]
 public class Rule
 {
-    private RuleCondition[] conditions;
+    public RuleCondition[] conditions;
+    public Color result;
 
-    private Color result;
-
+    // Create a generic rule
+    public Rule()
+    {
+        this.conditions = new RuleCondition[] { new NeighborStateCondition(Color.black, RelOp.EQ, 1) };
+        this.result = Color.black;
+    }
     public Rule(RuleCondition[] conditions, Color result)
     {
         this.conditions = conditions;

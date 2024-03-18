@@ -356,6 +356,7 @@
 "Assets/Scripts/Data/RelOp.cs"
 "Assets/Scripts/EditorControls/CelManagerEditorControls.cs"
 "Assets/Scripts/EditorControls/GridEditorControls.cs"
+"Assets/Scripts/EditorControls/RuleSetEditorControls.cs"
 "Assets/Scripts/Rules/Rule.cs"
 "Assets/Scripts/Rules/RuleConditions/CurrentStateCondition.cs"
 "Assets/Scripts/Rules/RuleConditions/NeighborStateCondition.cs"

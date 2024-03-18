@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+[Serializable]
 public class CurrentStateCondition : RuleCondition
 {
-    private RelOp op;
-
-    private Color colorState;
-
     public CurrentStateCondition(Color requiredColorState)
     {
-        this.colorState = requiredColorState;
-        this.op = RelOp.EQ;
+        op = RelOp.EQ;
+        color = requiredColorState;
+        quantity = 1;
+        // only the middle
+        targets = new int[] { 4 };
     }
 
     public CurrentStateCondition(Color requiredColorState, RelOp op)
@@ -19,26 +20,13 @@ public class CurrentStateCondition : RuleCondition
         // Technically, this value can only be EQ or NE.
         // However, the check method only checks if op == NE. Any other value defaults to EQ.
         this.op = op;
-        this.colorState = requiredColorState;
+        color = requiredColorState;
     }
 
-    override
-    public bool Check(Neighbors neighbors, Color currentColor)
+    
+    public override bool Check(Neighbors neighbors, Color currentColor)
     {
-        if (op == RelOp.NE)
-            return this.colorState != currentColor;
-        return this.colorState == currentColor;
+        return Check(neighbors);
     }
 
-    override
-    public RelOp GetOp()
-    {
-        return op;
-    }
-
-    override
-    public Color GetColorState()
-    {
-        return colorState;
-    }
 }

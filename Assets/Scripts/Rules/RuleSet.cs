@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 /**
  * This object contains the ruleset being used by dynamic cells.
  * The editor controls to change the rules should interface with this object.
  */
+[Serializable]
 public class RuleSet : MonoBehaviour
 {
     public List<Rule> ruleSet;
-
     public RuleSet()
     {
         ruleSet = new List<Rule>();

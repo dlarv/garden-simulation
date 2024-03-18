@@ -84,48 +84,36 @@ public class Grid : MonoBehaviour
     }
     private Neighbors GetNeighbors(int x, int y)
     {
-        Cell[] n = new Cell[8];
+        Cell[] n = new Cell[9];
+        Array.Fill(n, deadCell);
 
         // Top Left
         if (x - 1 >= 0 && y + 1 < cells.GetLength(1))
             n[0] = cells[x - 1, y + 1];
-        else
-            n[0] = deadCell;
         // Top
         if (y + 1 < cells.GetLength(1))
             n[1] = cells[x, y + 1];
-        else
-            n[1] = deadCell;
         // Top Right
         if (x + 1 < cells.GetLength(0) && y + 1 < cells.GetLength(1))
             n[2] = cells[x + 1, y + 1];
-        else
-            n[2] = deadCell;
         // Left
         if (x - 1 >= 0)
             n[3] = cells[x - 1, y];
-        else
-            n[3] = deadCell;
+        // Middle
+        n[4] = cells[x, y];
         // Right
         if (x + 1 < cells.GetLength(0))
-            n[4] = cells[x + 1, y];
-        else
-            n[4] = deadCell;
+            n[5] = cells[x + 1, y];
         // Bottom Left
         if (x - 1 >= 0 && y - 1 >= 0)
-            n[5] = cells[x - 1, y - 1];
-        else
-            n[5] = deadCell;
+            n[6] = cells[x - 1, y - 1];
         // Bottom
         if (y - 1 >= 0)
-            n[6] = cells[x, y - 1];
-        else
-            n[6] = deadCell;
+            n[7] = cells[x, y - 1];
         // Bottom Right
         if (x + 1 < cells.GetLength(0) && y - 1 >= 0)
-            n[7] = cells[x + 1, y - 1];
-        else
-            n[7] = deadCell;
+            n[8] = cells[x + 1, y - 1];
+
         return new Neighbors(n);
     }
 
