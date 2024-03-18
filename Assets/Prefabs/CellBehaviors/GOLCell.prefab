@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2996750199084349092}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a1e7620fa6c2c6478908222255def8a, type: 3}
   m_Name: 
@@ -113,5 +113,5 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   nextColor: {r: 1, g: 1, b: 1, a: 1}
   initialColor: {r: 1, g: 1, b: 1, a: 1}
-  rulesetPrefab: {fileID: 8739269827589501808, guid: 5770d7df4aad14f49ac8589031243f39, type: 3}
+  rulesetPrefab: {fileID: 981848168402468741, guid: 27169de5865964a4c83cd11a6f628faa, type: 3}
   isAlive: 0

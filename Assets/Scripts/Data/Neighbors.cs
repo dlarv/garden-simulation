@@ -1,16 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 
+[Serializable]
 public class Neighbors
 {
     // If finegrain control is needed, this can be read directly.
     // Defines a square around centered on the target cell.
     // Read from left to right, top to bottom. 
     // Centermost square is always null, it makes calculations easier.
-    public readonly Cell[] cells;
+    public Cell[] cells;
 
     public Neighbors(Cell[] cells)
     {

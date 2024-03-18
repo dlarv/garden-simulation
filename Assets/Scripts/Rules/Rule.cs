@@ -7,21 +7,21 @@ using System;
 public class Rule
 {
     public RuleCondition[] conditions;
-    public Color result;
+    public Result result;
 
     // Create a generic rule
     public Rule()
     {
         this.conditions = new RuleCondition[] { new NeighborStateCondition(Color.black, RelOp.EQ, 1) };
-        this.result = Color.black;
+        this.result = new Result(Color.black);
     }
-    public Rule(RuleCondition[] conditions, Color result)
+    public Rule(RuleCondition[] conditions, Result result)
     {
         this.conditions = conditions;
         this.result = result;
     }
 
-    public Rule(RuleCondition condition, Color result)
+    public Rule(RuleCondition condition, Result result)
     {
         this.conditions = new RuleCondition[] { condition };
         this.result = result;
@@ -30,7 +30,7 @@ public class Rule
     public List<Color> GetRelatedColors()
     {
         List<Color> colors = new List<Color>();
-        colors.Add(result);
+        colors.Add((Color)result.getResult(0).getColor(4));
 
         foreach (RuleCondition cond in conditions)
         {
@@ -45,20 +45,25 @@ public class Rule
         return conditions;
     }
 
-    public Color GetResult()
+    public Result GetResult()
     {
         return result;
     }
 
-    public Color? Check(Neighbors neighbors, Color currentColor)
+#nullable enable
+
+    public Result? Check(Neighbors neighbors, Color currentColor)
     {
         foreach (RuleCondition cond in conditions)
         {
+            Debug.Log("uh oh");
             if (!cond.Check(neighbors, currentColor))
             {
                 return null;
             }
         }
+
+        Debug.Log("its true");
         return result;
     }
 }

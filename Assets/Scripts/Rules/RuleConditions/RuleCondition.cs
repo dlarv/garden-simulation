@@ -15,6 +15,8 @@ public class RuleCondition
     public bool Check(Neighbors neighbors)
     {
         Neighbors n = neighbors.FilterByIndex((index) => Array.IndexOf(targets, index) != -1);
+        Debug.Log(n.Count());
+        Debug.Log("asd");
         n = n.FilterByColor(color);
         int value = n.Count();
         return op switch

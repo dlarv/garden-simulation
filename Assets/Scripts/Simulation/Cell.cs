@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 /**
  * This handles functionality related to the GameObject present in the scene tree.
  * This acts as the parent class for CellBehavior scripts (CellBehaviors should inherit this and implement 
@@ -11,6 +13,7 @@ using UnityEngine;
 
 // This attribute allows for the cell to change color/simulate in both Play and Edit mode.
 [ExecuteAlways]
+[Serializable]
 public class Cell : MonoBehaviour
 {
     public Neighbors neighbors { get; set; }
@@ -80,6 +83,6 @@ public class Cell : MonoBehaviour
         // This could return an array of colors, one for each neighbor and this cell.
         // However, for the moment this method assumes any changes are made 
         // inside of Calculate().
-        behavior.Calculate(color, neighbors);
+        behavior.Calculate(new Result(color), neighbors);
     }
 }

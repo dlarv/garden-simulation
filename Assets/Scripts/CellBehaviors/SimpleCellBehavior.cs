@@ -46,7 +46,7 @@ public class SimpleCellBehavior : Cell, ICellBehavior
         }
     }
 
-    public void Calculate(Color color, Neighbors neighbors)
+    public void Calculate(Result result, Neighbors neighbors)
     {
         // If either top 2 neighbors are green, become brown
         if (neighbors.GetColor(0) == colors[0] || neighbors.GetColor(2) == colors[0])
