@@ -31,10 +31,7 @@ public class CellColor
         int second = color32.g;
         int third = color32.b;
 
-        string returnString = string.Concat(first, second, third);
-
-        colorID = returnString;
-        //colorID = "asdasdasd";
+        colorID = $"{first:d3}{second:d3}{third:d3}";
     }
 
     public Color GetColor()

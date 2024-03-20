@@ -111,15 +111,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color:
-    color: {r: 1, g: 1, b: 1, a: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     colorID: 
   nextColor:
-    color: {r: 1, g: 1, b: 1, a: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     colorID: 
   initialColor:
-    color: {r: 1, g: 1, b: 1, a: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     colorID: 
   changeColor: 0
   changeToColor:
-    color: {r: 1, g: 1, b: 1, a: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
     colorID: 
