@@ -31,11 +31,11 @@ public class Rule
     public List<Color> GetRelatedColors()
     {
         List<Color> colors = new List<Color>();
-        colors.Add(result.getColor());
+        colors.Add(result.GetColor());
 
         foreach (RuleCondition cond in conditions)
         {
-            colors.Add(cond.GetColorState().getColor());
+            colors.Add(cond.GetColorState().GetColor());
         }
 
         return colors;
@@ -60,6 +60,6 @@ public class Rule
                 return null;
             }
         }
-        return result.getColor();
+        return result.GetColor();
     }
 }

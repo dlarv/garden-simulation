@@ -59,7 +59,7 @@ public class Neighbors
         int count = 0;
         foreach (Cell cell in cells)
         {
-            if (cell != null && cell.GetColor().compareColors(col))
+            if (cell != null && cell.GetColor().CompareColors(col))
                 count++;
         }
         return count;
@@ -72,7 +72,7 @@ public class Neighbors
 
         for (int i = 0; i < cells.Length; i++)
         {
-            if (cells[i] != null && cells[i].GetColor().compareColors(col))
+            if (cells[i] != null && cells[i].GetColor().CompareColors(col))
                 filtered[i] = cells[i];
         }
         return new Neighbors(filtered);
@@ -85,7 +85,7 @@ public class Neighbors
 
         for (int i = 0; i < cells.Length; i++)
         {
-            if (cells[i] != null && !cells[i].GetColor().compareColors(col))
+            if (cells[i] != null && !cells[i].GetColor().CompareColors(col))
                 filtered[i] = cells[i];
         }
         return new Neighbors(filtered);

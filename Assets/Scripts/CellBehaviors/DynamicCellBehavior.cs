@@ -29,7 +29,7 @@ public class DynamicCellBehavior : Cell, ICellBehavior
         {
             color = changeToColor;
 
-            color.calculateID();
+            color.CalculateID();
 
             SetColor(color);
 

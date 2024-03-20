@@ -13,7 +13,7 @@ using UnityEngine;
 [ExecuteAlways]
 public class Cell : MonoBehaviour
 {
-    public Neighbors neighbors { get; set; }
+    public Neighbors neighbors;
     public ICellBehavior behavior;
     public CellColor color;
     public CellColor nextColor;
@@ -44,7 +44,7 @@ public class Cell : MonoBehaviour
         if (!Application.isPlaying)
             initialColor = col;
 
-        material.SetColor("_Color", col.getColor());
+        material.SetColor("_Color", col.GetColor());
         color = col;
     }
 

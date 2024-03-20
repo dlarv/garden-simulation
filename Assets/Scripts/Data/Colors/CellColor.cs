@@ -13,17 +13,17 @@ public class CellColor
 
     void OnValidate()
     {
-        calculateID();
+        CalculateID();
     }
 
     public CellColor(Color color)
     {
         this.color = color;
 
-        calculateID();
+        CalculateID();
     }
 
-    public void calculateID()
+    public void CalculateID()
     {
         Color32 color32 = color;
 
@@ -38,25 +38,17 @@ public class CellColor
         //colorID = "asdasdasd";
     }
 
-    public Color getColor()
+    public Color GetColor()
     {
-        calculateID();
+        CalculateID();
 
         return color;
     }
 
-    public bool compareColors(CellColor otherColor)
+    public bool CompareColors(CellColor otherColor)
     {
-        calculateID();
-        otherColor.calculateID();
-
-        if (colorID == otherColor.colorID)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        CalculateID();
+        otherColor.CalculateID();
+        return colorID == otherColor.colorID;
     }
 }
