@@ -105,11 +105,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8148071164648806709}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
-  nextColor: {r: 0, g: 0, b: 0, a: 0}
-  initialColor: {r: 0, g: 0, b: 0, a: 0}
+  color:
+    color: {r: 1, g: 1, b: 1, a: 0}
+    colorID: 
+  nextColor:
+    color: {r: 1, g: 1, b: 1, a: 0}
+    colorID: 
+  initialColor:
+    color: {r: 1, g: 1, b: 1, a: 0}
+    colorID: 
+  changeColor: 0
+  changeToColor:
+    color: {r: 1, g: 1, b: 1, a: 0}
+    colorID: 

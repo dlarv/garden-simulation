@@ -6,7 +6,7 @@ using UnityEngine;
  * This class implements the normal conway game of life rules.
  * Its main purpose was to ensure the import of the ruleset system from java
  * to here was successful.
- */
+ 
 public class GOLCellBehavior : Cell, ICellBehavior
 {
     public GameObject rulesetPrefab;
@@ -19,9 +19,15 @@ public class GOLCellBehavior : Cell, ICellBehavior
         {
             GameObject obj = GameObject.Find("ConwaysRules");
             if (obj != null)
+            {
                 rules = obj.GetComponent<RuleSet>();
-            else 
+                Debug.Log("using new rules");
+            }
+            else
+            {
                 GenerateGOLRuleset(rulesetPrefab);
+                Debug.Log("old rules");
+            }
         }
     }
     void OnValidate()
@@ -78,3 +84,4 @@ public class GOLCellBehavior : Cell, ICellBehavior
         rules.Add(new Rule(new NeighborStateCondition(LIVE, RelOp.EQ, 3), LIVE));
     }
 }
+*/

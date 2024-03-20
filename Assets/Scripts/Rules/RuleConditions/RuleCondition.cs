@@ -9,7 +9,7 @@ public class RuleCondition
     // Which neighbor(s) to check
     public int[] targets;
     public RelOp op;
-    public Color color;
+    public CellColor color;
     public int quantity;
 
     public bool Check(Neighbors neighbors)
@@ -27,12 +27,12 @@ public class RuleCondition
             _ => value != quantity,
         };
     }
-    public virtual bool Check(Neighbors neighbors, Color color) { return false;  }
+
     public RelOp GetOp()
     {
         return op;
     }
-    public Color GetColorState()
+    public CellColor GetColorState()
     {
         return color;
     }

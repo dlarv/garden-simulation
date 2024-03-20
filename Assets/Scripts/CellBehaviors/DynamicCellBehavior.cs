@@ -10,23 +10,44 @@ using UnityEngine;
 public class DynamicCellBehavior : Cell, ICellBehavior
 {
     private static RuleSet rules = null;
+
+    public bool changeColor;
+
+    public CellColor changeToColor;
+
     public void Init()
     {
-        if(rules == null)
+        if (rules == null)
         {
             FindRuleSet();
         }
     }
 
+    void OnValidate()
+    {
+        if (changeColor)
+        {
+            color = changeToColor;
+
+            color.calculateID();
+
+            SetColor(color);
+
+            SetNextColor(color);
+
+            changeColor = false;
+        }
+    }
+
     // This is where the rules are implemented.
-    public void Calculate(Color color, Neighbors neighbors)
+    public void Calculate(CellColor color, Neighbors neighbors)
     {
         foreach (Rule rule in rules.GetRuleSet())
         {
             Color? c = rule.Check(neighbors, color);
             if (c != null)
             {
-                SetNextColor((Color)c);
+                SetNextColor(new CellColor((Color)c));
                 return;
             }
         }

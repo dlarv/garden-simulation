@@ -110,5 +110,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdb2e5c1b3f4224986b25f6c7d88cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 1}
-  nextColor: {r: 1, g: 1, b: 1, a: 1}
+  neighbors:
+    cells: []
+  color:
+    color: {r: 1, g: 1, b: 1, a: 0}
+    colorID: 
+  nextColor:
+    color: {r: 1, g: 1, b: 1, a: 0}
+    colorID: 
+  initialColor:
+    color: {r: 1, g: 1, b: 1, a: 0}
+    colorID: 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+/*
 [Serializable]
 public class NeighborStateCondition : RuleCondition
 {
@@ -15,8 +15,6 @@ public class NeighborStateCondition : RuleCondition
         targets = new int[] { 0, 1, 2, 3, 5, 6, 7, 8 };
     }
 
-    override public bool Check(Neighbors neighbors, Color currentColor)
-    {
-        return Check(neighbors);
-    }
+
 }
+*/

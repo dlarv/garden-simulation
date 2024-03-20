@@ -5,7 +5,7 @@ using UnityEngine;
 /**
  * Original CellBehavior defined.
  * Simulates roots growing.
- */
+ 
 public class SimpleCellBehavior : Cell, ICellBehavior
 {
     public Color[] colors;
@@ -104,3 +104,4 @@ public class SimpleCellBehavior : Cell, ICellBehavior
         }
     }
 }
+*/

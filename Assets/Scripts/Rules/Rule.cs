@@ -7,21 +7,22 @@ using System;
 public class Rule
 {
     public RuleCondition[] conditions;
-    public Color result;
+
+    public CellColor result;
 
     // Create a generic rule
     public Rule()
     {
-        this.conditions = new RuleCondition[] { new NeighborStateCondition(Color.black, RelOp.EQ, 1) };
-        this.result = Color.black;
+        //this.conditions = new RuleCondition[] { new NeighborStateCondition(Color.black, RelOp.EQ, 1) };
+        this.result = new CellColor(Color.black);
     }
-    public Rule(RuleCondition[] conditions, Color result)
+    public Rule(RuleCondition[] conditions, CellColor result)
     {
         this.conditions = conditions;
         this.result = result;
     }
 
-    public Rule(RuleCondition condition, Color result)
+    public Rule(RuleCondition condition, CellColor result)
     {
         this.conditions = new RuleCondition[] { condition };
         this.result = result;
@@ -30,11 +31,11 @@ public class Rule
     public List<Color> GetRelatedColors()
     {
         List<Color> colors = new List<Color>();
-        colors.Add(result);
+        colors.Add(result.getColor());
 
         foreach (RuleCondition cond in conditions)
         {
-            colors.Add(cond.GetColorState());
+            colors.Add(cond.GetColorState().getColor());
         }
 
         return colors;
@@ -45,20 +46,20 @@ public class Rule
         return conditions;
     }
 
-    public Color GetResult()
+    public CellColor GetResult()
     {
         return result;
     }
 
-    public Color? Check(Neighbors neighbors, Color currentColor)
+    public Color? Check(Neighbors neighbors, CellColor currentColor)
     {
         foreach (RuleCondition cond in conditions)
         {
-            if (!cond.Check(neighbors, currentColor))
+            if (!cond.Check(neighbors))
             {
                 return null;
             }
         }
-        return result;
+        return result.getColor();
     }
 }

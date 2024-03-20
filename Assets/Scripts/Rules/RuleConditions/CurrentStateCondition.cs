@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+/*
 [Serializable]
 public class CurrentStateCondition : RuleCondition
 {
@@ -23,10 +24,7 @@ public class CurrentStateCondition : RuleCondition
         color = requiredColorState;
     }
 
-    
-    public override bool Check(Neighbors neighbors, Color currentColor)
-    {
-        return Check(neighbors);
-    }
+   
 
 }
+*/
