@@ -9,7 +9,7 @@ public class Neighbors
     // If finegrain control is needed, this can be read directly.
     // Defines a square around centered on the target cell.
     // Read from left to right, top to bottom. 
-    // Centermost square is always null, it makes calculations easier.
+    // Centermost square contains the current cell.
     public readonly Cell[] cells;
 
     public Neighbors(Cell[] cells)

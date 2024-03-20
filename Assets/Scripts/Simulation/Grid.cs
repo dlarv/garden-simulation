@@ -55,7 +55,7 @@ public class Grid : MonoBehaviour
             for (int x = 0; x < gridLength; x++)
             {
                 Cell nextCell = Instantiate(cell, new Vector3(x, y, 0), Quaternion.identity).GetComponent<Cell>();
-                nextCell.transform.SetParent(this.transform);
+                nextCell.transform.SetParent(transform);
 
                 cells[x, y] = nextCell;
             }

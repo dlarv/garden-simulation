@@ -10,12 +10,6 @@ public class Rule
 
     public CellColor result;
 
-    // Create a generic rule
-    public Rule()
-    {
-        //this.conditions = new RuleCondition[] { new NeighborStateCondition(Color.black, RelOp.EQ, 1) };
-        this.result = new CellColor(Color.black);
-    }
     public Rule(RuleCondition[] conditions, CellColor result)
     {
         this.conditions = conditions;
@@ -26,29 +20,6 @@ public class Rule
     {
         this.conditions = new RuleCondition[] { condition };
         this.result = result;
-    }
-
-    public List<Color> GetRelatedColors()
-    {
-        List<Color> colors = new List<Color>();
-        colors.Add(result.GetColor());
-
-        foreach (RuleCondition cond in conditions)
-        {
-            colors.Add(cond.GetColorState().GetColor());
-        }
-
-        return colors;
-    }
-
-    public RuleCondition[] GetConditions()
-    {
-        return conditions;
-    }
-
-    public CellColor GetResult()
-    {
-        return result;
     }
 
     public Color? Check(Neighbors neighbors, CellColor currentColor)

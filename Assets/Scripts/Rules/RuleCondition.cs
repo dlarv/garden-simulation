@@ -27,14 +27,5 @@ public class RuleCondition
             _ => value != quantity,
         };
     }
-
-    public RelOp GetOp()
-    {
-        return op;
-    }
-    public CellColor GetColorState()
-    {
-        return color;
-    }
 }
 

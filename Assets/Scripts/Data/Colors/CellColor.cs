@@ -34,7 +34,6 @@ public class CellColor
         string returnString = string.Concat(first, second, third);
 
         colorID = returnString;
-
         //colorID = "asdasdasd";
     }
 

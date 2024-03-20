@@ -9,7 +9,7 @@ using UnityEngine;
  */
 public class DynamicCellBehavior : Cell, ICellBehavior
 {
-    private static RuleSet rules = null;
+    private static RuleSet ruleSet = null;
 
     public bool changeColor;
 
@@ -17,7 +17,7 @@ public class DynamicCellBehavior : Cell, ICellBehavior
 
     public void Init()
     {
-        if (rules == null)
+        if (ruleSet == null)
         {
             FindRuleSet();
         }
@@ -42,7 +42,7 @@ public class DynamicCellBehavior : Cell, ICellBehavior
     // This is where the rules are implemented.
     public void Calculate(CellColor color, Neighbors neighbors)
     {
-        foreach (Rule rule in rules.GetRuleSet())
+        foreach (Rule rule in ruleSet.rules)
         {
             Color? c = rule.Check(neighbors, color);
             if (c != null)
@@ -54,6 +54,6 @@ public class DynamicCellBehavior : Cell, ICellBehavior
     }
     private void FindRuleSet()
     {
-        rules = GameObject.Find("RuleSet").GetComponent<RuleSet>();
+        ruleSet = GameObject.Find("RuleSet").GetComponent<RuleSet>();
     }
 }
