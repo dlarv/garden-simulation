@@ -11,6 +11,8 @@ public class CellColor
 
     public string colorID;
 
+    public bool isNull;
+
     void OnValidate()
     {
         CalculateID();
@@ -39,6 +41,11 @@ public class CellColor
         CalculateID();
 
         return color;
+    }
+
+    public bool GetNull()
+    {
+        return isNull;
     }
 
     public bool CompareColors(CellColor otherColor)

@@ -39,15 +39,25 @@ public class DynamicCellBehavior : Cell, ICellBehavior
         }
     }
 
+    #nullable enable
+
     // This is where the rules are implemented.
     public void Calculate(CellColor color, Neighbors neighbors)
     {
         foreach (Rule rule in ruleSet.rules)
         {
-            Color? c = rule.Check(neighbors, color);
+            Result? c = rule.Check(neighbors, color);
             if (c != null)
             {
-                SetNextColor(new CellColor((Color)c));
+                int x = Random.Range(0,c.results.Length);
+
+                for(int i = 0; i < 9; i++)
+                {
+                    if(c.GetGrid(x).GetCellColor(i).GetNull() == false)
+                    {
+                        neighbors.SetColorOf(i, c.GetGrid(x).GetCellColor(i));
+                    }
+                }
                 return;
             }
         }

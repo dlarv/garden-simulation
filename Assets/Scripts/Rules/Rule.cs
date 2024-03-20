@@ -8,21 +8,23 @@ public class Rule
 {
     public RuleCondition[] conditions;
 
-    public CellColor result;
+    public Result result;
 
-    public Rule(RuleCondition[] conditions, CellColor result)
+    public Rule(RuleCondition[] conditions, Result result)
     {
         this.conditions = conditions;
         this.result = result;
     }
 
-    public Rule(RuleCondition condition, CellColor result)
+    public Rule(RuleCondition condition, Result result)
     {
         this.conditions = new RuleCondition[] { condition };
         this.result = result;
     }
 
-    public Color? Check(Neighbors neighbors, CellColor currentColor)
+#nullable enable
+
+    public Result? Check(Neighbors neighbors, CellColor currentColor)
     {
         foreach (RuleCondition cond in conditions)
         {
@@ -31,6 +33,6 @@ public class Rule
                 return null;
             }
         }
-        return result.GetColor();
+        return result;
     }
 }
