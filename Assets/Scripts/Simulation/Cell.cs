@@ -80,6 +80,6 @@ public class Cell : MonoBehaviour
         // This could return an array of colors, one for each neighbor and this cell.
         // However, for the moment this method assumes any changes are made 
         // inside of Calculate().
-        behavior.Calculate(color, neighbors);
+        behavior.Calculate(neighbors);
     }
 }

@@ -22,9 +22,7 @@ public class Rule
         this.result = result;
     }
 
-#nullable enable
-
-    public Result? Check(Neighbors neighbors, CellColor currentColor)
+    public Result Check(Neighbors neighbors)
     {
         foreach (RuleCondition cond in conditions)
         {
