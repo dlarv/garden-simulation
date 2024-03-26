@@ -15,9 +15,9 @@ public class Cell : MonoBehaviour
 {
     public Neighbors neighbors;
     public ICellBehavior behavior;
-    public CellColor color;
-    public CellColor nextColor;
-    public CellColor initialColor;
+    public CellData color;
+    public CellData nextColor;
+    public CellData initialColor;
 
     // When a neighboring cell wants to influence this cell's color, it adds its preferred color into this queue. 
     // The ICellBehavior decides if/how to deal with these requests.
@@ -39,16 +39,16 @@ public class Cell : MonoBehaviour
     }
 
     // Change the gameobject's color.
-    public void SetColor(CellColor col)
+    public void SetColor(CellData col)
     {
         if (!Application.isPlaying)
             initialColor = col;
 
-        material.SetColor("_Color", col.GetColor());
+        material.SetColor("_Color", col.GetCellColor());
         color = col;
     }
 
-    public void SetNextColor(CellColor col)
+    public void SetNextColor(CellData col)
     {
         nextColor = col;
     }
@@ -57,7 +57,7 @@ public class Cell : MonoBehaviour
     {
         SetColor(initialColor);
     }
-    public CellColor GetColor()
+    public CellData GetColor()
     {
         return color;
     }

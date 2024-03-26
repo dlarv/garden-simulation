@@ -21,25 +21,26 @@ public class RuleSetEditor : Editor
         {
             GUILayout.Label("Rule " + (i + 1), GUILayout.Height(60));
 
-            for (int j = 0; j < ruleset.rules[i].conditions.Length; j++)
+            for (int j = 0; j < ruleset.rules[i].conditions.Count; j++)
             {
+                RuleCondition currentCondition = ruleset.rules[i].GetCondition(j);
                 GUILayout.Label("Condition " + (j + 1), GUILayout.Height(50));
 
                 GUILayout.BeginHorizontal("box");
 
-                ruleset.rules[i].GetCondition(j).targetString = EditorGUILayout.TextField(ruleset.rules[i].GetCondition(j).targetString);
+                currentCondition.targetString = EditorGUILayout.TextField(currentCondition.targetString);
 
-                ruleset.rules[i].GetCondition(j).CalculateTargets();
+                currentCondition.CalculateTargets();
 
                 GUILayout.EndHorizontal();
 
                 GUILayout.BeginHorizontal("box");
 
-                ruleset.rules[i].GetCondition(j).color.color = EditorGUILayout.ColorField("", ruleset.rules[i].GetCondition(j).GetColor(), GUILayout.Width(50));
+                currentCondition.color.color = EditorGUILayout.ColorField("", currentCondition.GetColor(), GUILayout.Width(50));
 
-                ruleset.rules[i].GetCondition(j).op = RuleCondition.CalculateOp(EditorGUILayout.Popup(ruleset.rules[i].GetCondition(j).GetRelOp(), selStrings));
+                currentCondition.op = RuleCondition.CalculateOp(EditorGUILayout.Popup(currentCondition.GetRelOp(), selStrings));
 
-                ruleset.rules[i].GetCondition(j).quantity = int.Parse(EditorGUILayout.TextField(ruleset.rules[i].GetCondition(j).quantity.ToString()));
+                currentCondition.quantity = int.Parse(EditorGUILayout.TextField(currentCondition.quantity.ToString()));
 
                 GUILayout.EndHorizontal();
 
@@ -56,53 +57,45 @@ public class RuleSetEditor : Editor
 
             for (int j = 0; j < ruleset.rules[i].result.results.Length; j++)
             {
+                CellColorGrid colorGrid = ruleset.rules[i].result.results[j];
                 GUILayout.Label("Result " + (j + 1), GUILayout.Height(40));
 
                 GUILayout.BeginHorizontal("box");
 
-                ruleset.rules[i].result.results[j].GetCellColor(0).color = EditorGUILayout.ColorField("", ruleset.rules[i].result.results[j].GetCellColor(0).color, GUILayout.Width(50));
+                colorGrid.GetCellColor(0).color = EditorGUILayout.ColorField("", colorGrid.GetCellColor(0).color, GUILayout.Width(50));
+                colorGrid.GetCellColor(0).isNull = GUILayout.Toggle(colorGrid.GetCellColor(0).isNull, "", GUILayout.Width(30));
 
-                ruleset.rules[i].result.results[j].GetCellColor(0).isNull = GUILayout.Toggle(ruleset.rules[i].result.results[j].GetCellColor(0).isNull, "", GUILayout.Width(30));
+                colorGrid.GetCellColor(1).color = EditorGUILayout.ColorField("", colorGrid.GetCellColor(1).color, GUILayout.Width(50));
+                colorGrid.GetCellColor(1).isNull = GUILayout.Toggle(colorGrid.GetCellColor(1).isNull, "", GUILayout.Width(30));
 
-                ruleset.rules[i].result.results[j].GetCellColor(1).color = EditorGUILayout.ColorField("", ruleset.rules[i].result.results[j].GetCellColor(1).color, GUILayout.Width(50));
-
-                ruleset.rules[i].result.results[j].GetCellColor(1).isNull = GUILayout.Toggle(ruleset.rules[i].result.results[j].GetCellColor(1).isNull, "", GUILayout.Width(30));
-
-                ruleset.rules[i].result.results[j].GetCellColor(2).color = EditorGUILayout.ColorField("", ruleset.rules[i].result.results[j].GetCellColor(2).color, GUILayout.Width(50));
-
-                ruleset.rules[i].result.results[j].GetCellColor(2).isNull = GUILayout.Toggle(ruleset.rules[i].result.results[j].GetCellColor(2).isNull, "", GUILayout.Width(30));
+                colorGrid.GetCellColor(2).color = EditorGUILayout.ColorField("", colorGrid.GetCellColor(2).color, GUILayout.Width(50));
+                colorGrid.GetCellColor(2).isNull = GUILayout.Toggle(colorGrid.GetCellColor(2).isNull, "", GUILayout.Width(30));
 
                 GUILayout.EndHorizontal();
 
                 GUILayout.BeginHorizontal("box");
 
-                ruleset.rules[i].result.results[j].GetCellColor(3).color = EditorGUILayout.ColorField("", ruleset.rules[i].result.results[j].GetCellColor(3).color, GUILayout.Width(50));
+                colorGrid.GetCellColor(3).color = EditorGUILayout.ColorField("", colorGrid.GetCellColor(3).color, GUILayout.Width(50));
+                colorGrid.GetCellColor(3).isNull = GUILayout.Toggle(colorGrid.GetCellColor(3).isNull, "", GUILayout.Width(30));
 
-                ruleset.rules[i].result.results[j].GetCellColor(3).isNull = GUILayout.Toggle(ruleset.rules[i].result.results[j].GetCellColor(3).isNull, "", GUILayout.Width(30));
+                colorGrid.GetCellColor(4).color = EditorGUILayout.ColorField("", colorGrid.GetCellColor(4).color, GUILayout.Width(50));
+                colorGrid.GetCellColor(4).isNull = GUILayout.Toggle(colorGrid.GetCellColor(4).isNull, "", GUILayout.Width(30));
 
-                ruleset.rules[i].result.results[j].GetCellColor(4).color = EditorGUILayout.ColorField("", ruleset.rules[i].result.results[j].GetCellColor(4).color, GUILayout.Width(50));
-
-                ruleset.rules[i].result.results[j].GetCellColor(4).isNull = GUILayout.Toggle(ruleset.rules[i].result.results[j].GetCellColor(4).isNull, "", GUILayout.Width(30));
-
-                ruleset.rules[i].result.results[j].GetCellColor(5).color = EditorGUILayout.ColorField("", ruleset.rules[i].result.results[j].GetCellColor(5).color, GUILayout.Width(50));
-
-                ruleset.rules[i].result.results[j].GetCellColor(5).isNull = GUILayout.Toggle(ruleset.rules[i].result.results[j].GetCellColor(5).isNull, "", GUILayout.Width(30));
+                colorGrid.GetCellColor(5).color = EditorGUILayout.ColorField("", colorGrid.GetCellColor(5).color, GUILayout.Width(50));
+                colorGrid.GetCellColor(5).isNull = GUILayout.Toggle(colorGrid.GetCellColor(5).isNull, "", GUILayout.Width(30));
 
                 GUILayout.EndHorizontal();
 
                 GUILayout.BeginHorizontal("box");
 
-                ruleset.rules[i].result.results[j].GetCellColor(6).color = EditorGUILayout.ColorField("", ruleset.rules[i].result.results[j].GetCellColor(6).color, GUILayout.Width(50));
+                colorGrid.GetCellColor(6).color = EditorGUILayout.ColorField("", colorGrid.GetCellColor(6).color, GUILayout.Width(50));
+                colorGrid.GetCellColor(6).isNull = GUILayout.Toggle(colorGrid.GetCellColor(6).isNull, "", GUILayout.Width(30));
 
-                ruleset.rules[i].result.results[j].GetCellColor(6).isNull = GUILayout.Toggle(ruleset.rules[i].result.results[j].GetCellColor(6).isNull, "", GUILayout.Width(30));
+                colorGrid.GetCellColor(7).color = EditorGUILayout.ColorField("", colorGrid.GetCellColor(7).color, GUILayout.Width(50));
+                colorGrid.GetCellColor(7).isNull = GUILayout.Toggle(colorGrid.GetCellColor(7).isNull, "", GUILayout.Width(30));
 
-                ruleset.rules[i].result.results[j].GetCellColor(7).color = EditorGUILayout.ColorField("", ruleset.rules[i].result.results[j].GetCellColor(7).color, GUILayout.Width(50));
-
-                ruleset.rules[i].result.results[j].GetCellColor(7).isNull = GUILayout.Toggle(ruleset.rules[i].result.results[j].GetCellColor(7).isNull, "", GUILayout.Width(30));
-
-                ruleset.rules[i].result.results[j].GetCellColor(8).color = EditorGUILayout.ColorField("", ruleset.rules[i].result.results[j].GetCellColor(8).color, GUILayout.Width(50));
-
-                ruleset.rules[i].result.results[j].GetCellColor(8).isNull = GUILayout.Toggle(ruleset.rules[i].result.results[j].GetCellColor(8).isNull, "", GUILayout.Width(30));
+                colorGrid.GetCellColor(8).color = EditorGUILayout.ColorField("", colorGrid.GetCellColor(8).color, GUILayout.Width(50));
+                colorGrid.GetCellColor(8).isNull = GUILayout.Toggle(colorGrid.GetCellColor(8).isNull, "", GUILayout.Width(30));
 
                 GUILayout.EndHorizontal();
 
@@ -136,4 +129,5 @@ public class RuleSetEditor : Editor
 
         GUILayout.EndHorizontal();
     }
+
 }

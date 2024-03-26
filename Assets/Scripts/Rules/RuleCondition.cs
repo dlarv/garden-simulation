@@ -10,7 +10,7 @@ public class RuleCondition
     // Which neighbor(s) to check
     public int[] targets;
     public RelOp op;
-    public CellColor color;
+    public CellData color;
     public int quantity;
     public string targetString;
 
@@ -20,7 +20,7 @@ public class RuleCondition
 
         op = RelOp.GT;
 
-        color = new CellColor(Color.white);
+        color = new CellData(Color.white);
 
         quantity = 0;
 
@@ -62,7 +62,7 @@ public class RuleCondition
 
     public Color GetColor()
     {
-        return color.GetColor();
+        return color.GetCellColor();
     }
 
     public int GetRelOp()

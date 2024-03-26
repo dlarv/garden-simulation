@@ -13,7 +13,7 @@ public class DynamicCellBehavior : Cell, ICellBehavior
 
     public bool changeColor;
 
-    public CellColor changeToColor;
+    public CellData changeToColor;
 
     public void Init()
     {

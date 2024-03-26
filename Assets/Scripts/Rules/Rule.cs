@@ -6,11 +6,11 @@ using System;
 [Serializable]
 public class Rule
 {
-    public RuleCondition[] conditions;
+    public List<RuleCondition> conditions;
 
     public Result result;
 
-    public Rule(RuleCondition[] conditions, Result result)
+    public Rule(List<RuleCondition> conditions, Result result)
     {
         this.conditions = conditions;
         this.result = result;
@@ -18,7 +18,9 @@ public class Rule
 
     public Rule(RuleCondition condition, Result result)
     {
-        this.conditions = new RuleCondition[] { condition };
+        conditions = new();
+        conditions.Add(condition);
+
         this.result = result;
     }
 
@@ -39,21 +41,16 @@ public class Rule
         return conditions[condition];
     }
 
-    //this is why I should just use a list...
-
     public void AddCondition()
     {
-        Array.Resize(ref conditions, conditions.Length + 1);
-
-        conditions[conditions.Length - 1] = new RuleCondition();
+        conditions.Add(new RuleCondition());
     }
 
     public void RemoveCondition(int removeInt)
     {
-        RuleCondition contoswitch = conditions[conditions.Length - 1];
-
-        conditions[removeInt] = contoswitch;
-
-        Array.Resize(ref conditions, conditions.Length - 1);
+        //RuleCondition contoswitch = conditions[conditions.Length - 1];
+        //conditions[removeInt] = contoswitch;
+        //Array.Resize(ref conditions, conditions.Length - 1);
+        conditions.RemoveAt(removeInt);
     }
 }

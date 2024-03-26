@@ -18,11 +18,11 @@ public class Neighbors
     }
 
     // The following two methods are workaround solutions kept here for fast prototyping.
-    public CellColor GetColor(int index)
+    public CellData GetColor(int index)
     {
         return cells[index].GetColor();
     }
-    public void SetColorOf(int index, CellColor col)
+    public void SetColorOf(int index, CellData col)
     {
         if (cells[index] == null)
             return;
@@ -54,7 +54,7 @@ public class Neighbors
 
 
     // Get the number of cells that are a specific color.
-    public int CountColor(CellColor col)
+    public int CountColor(CellData col)
     {
         int count = 0;
         foreach (Cell cell in cells)
@@ -66,7 +66,7 @@ public class Neighbors
     }
 
     // Returns obj only containing cells w/ a specific color.
-    public Neighbors FilterByColor(CellColor col)
+    public Neighbors FilterByColor(CellData col)
     {
         Cell[] filtered = new Cell[cells.Length];
 
@@ -79,7 +79,7 @@ public class Neighbors
     }
 
     // Returns obj only containing cells w/o a specific color.
-    public Neighbors InverseFilterByColor(CellColor col)
+    public Neighbors InverseFilterByColor(CellData col)
     {
         Cell[] filtered = new Cell[cells.Length];
 
