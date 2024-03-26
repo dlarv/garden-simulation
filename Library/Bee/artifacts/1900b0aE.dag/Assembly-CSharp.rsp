@@ -357,6 +357,7 @@
 "Assets/Scripts/Data/Result.cs"
 "Assets/Scripts/EditorControls/CelManagerEditorControls.cs"
 "Assets/Scripts/EditorControls/GridEditorControls.cs"
+"Assets/Scripts/EditorControls/RuleSetEditor.cs"
 "Assets/Scripts/Rules/Rule.cs"
 "Assets/Scripts/Rules/RuleCondition.cs"
 "Assets/Scripts/Rules/RuleSet.cs"

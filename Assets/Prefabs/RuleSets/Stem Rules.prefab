@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2655913193684838440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858283107945050808}
+  - component: {fileID: 899966317868954070}
+  m_Layer: 0
+  m_Name: Stem Rules
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &858283107945050808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2655913193684838440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.388538, y: 12.470371, z: 0.08311181}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &899966317868954070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2655913193684838440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589e2b10b388af94c9677001bdcb516c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rules:
+  - conditions:
+    - targets: 04000000
+      op: 4
+      color:
+        color: {r: 0, g: 0, b: 0, a: 1}
+        colorID: 000000000
+        isNull: 0
+      quantity: 1
+    - targets: 07000000
+      op: 4
+      color:
+        color: {r: 0, g: 1, b: 0.9019608, a: 1}
+        colorID: 000255230
+        isNull: 0
+      quantity: 1
+    result:
+      results:
+      - colorGrid:
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 1, b: 0, a: 1}
+          colorID: 000255000
+          isNull: 1
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 1, b: 0, a: 1}
+          colorID: 000255000
+          isNull: 0
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+  - conditions:
+    - targets: 04000000
+      op: 4
+      color:
+        color: {r: 0, g: 1, b: 0, a: 1}
+        colorID: 000255000
+        isNull: 0
+      quantity: 1
+    - targets: 01000000
+      op: 5
+      color:
+        color: {r: 0.78431374, g: 1, b: 0, a: 1}
+        colorID: 200255000
+        isNull: 0
+      quantity: 1
+    result:
+      results:
+      - colorGrid:
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0.78431374, g: 1, b: 0, a: 1}
+          colorID: 200255000
+          isNull: 0
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 0, b: 0, a: 1}
+          colorID: 000000000
+          isNull: 0
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0.78431374, g: 1, b: 0, a: 1}
+          colorID: 200255000
+          isNull: 1
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+  - conditions:
+    - targets: 04000000
+      op: 4
+      color:
+        color: {r: 0, g: 1, b: 0, a: 1}
+        colorID: 000255000
+        isNull: 0
+      quantity: 1
+    - targets: 01000000
+      op: 4
+      color:
+        color: {r: 0.78431374, g: 1, b: 0, a: 1}
+        colorID: 200255000
+        isNull: 0
+      quantity: 1
+    result:
+      results:
+      - colorGrid:
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 1, b: 0, a: 1}
+          colorID: 000255000
+          isNull: 0
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 0, b: 0, a: 1}
+          colorID: 000000000
+          isNull: 0
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1
+        - color: {r: 0.78431374, g: 1, b: 0, a: 1}
+          colorID: 200255000
+          isNull: 1
+        - color: {r: 0, g: 0, b: 1, a: 1}
+          colorID: 
+          isNull: 1

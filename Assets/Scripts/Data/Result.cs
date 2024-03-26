@@ -13,6 +13,11 @@ public class Result
 {
     public CellColorGrid[] results;
 
+    public Result()
+    {
+        results = new CellColorGrid[1];
+    }
+
     public CellColorGrid GetGrid(int grid)
     {
         return results[grid];
@@ -22,5 +27,21 @@ public class Result
     {
         int x = UnityEngine.Random.Range(0, results.Length);
         return results[x];
+    }
+
+    public void AddResult()
+    {
+        Array.Resize(ref results, results.Length + 1);
+
+        results[results.Length - 1] = new CellColorGrid();
+    }
+
+    public void RemoveResult(int removeInt)
+    {
+        CellColorGrid restoswitch = results[results.Length - 1];
+
+        results[removeInt] = restoswitch;
+
+        Array.Resize(ref results, results.Length - 1);
     }
 }

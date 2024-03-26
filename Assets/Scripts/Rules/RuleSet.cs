@@ -24,4 +24,14 @@ public class RuleSet : MonoBehaviour
     {
         return rules.Count;
     }
+
+    public void AddRule()
+    {
+        rules.Add(new Rule(new RuleCondition(), new Result()));
+    }
+
+    public void RemoveRule(int removeInt)
+    {
+        rules.RemoveAt(removeInt);
+    }
 }

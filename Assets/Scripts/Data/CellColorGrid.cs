@@ -12,6 +12,11 @@ public class CellColorGrid
 {
     public CellColor[]  colorGrid = new CellColor[9];
 
+    public CellColorGrid()
+    {
+        colorGrid = new CellColor[9];
+    }
+
     public CellColor GetCellColor(int cell)
     {
         return colorGrid[cell];

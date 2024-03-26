@@ -33,4 +33,27 @@ public class Rule
         }
         return result;
     }
+
+    public RuleCondition GetCondition(int condition)
+    {
+        return conditions[condition];
+    }
+
+    //this is why I should just use a list...
+
+    public void AddCondition()
+    {
+        Array.Resize(ref conditions, conditions.Length + 1);
+
+        conditions[conditions.Length - 1] = new RuleCondition();
+    }
+
+    public void RemoveCondition(int removeInt)
+    {
+        RuleCondition contoswitch = conditions[conditions.Length - 1];
+
+        conditions[removeInt] = contoswitch;
+
+        Array.Resize(ref conditions, conditions.Length - 1);
+    }
 }
