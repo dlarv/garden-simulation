@@ -41,7 +41,28 @@ public class Grid : MonoBehaviour
     // and when exiting Play mode.
     void Awake()
     {
+        if (cells != null || transform.childCount == 0)
+            return;
 
+        // Collect cells from scene, if it exists
+        cells = new Cell[gridLength, gridLength];
+        int i = 0;
+        for (int y = 0; y < gridLength && i < transform.childCount; y++)
+        {
+            for (int x = 0; x < gridLength && i < transform.childCount; x++)
+            {
+                GameObject cell = transform.GetChild(i++).gameObject;
+                cells[x, y] = cell.GetComponent<Cell>();
+            }
+        }
+
+        for (int y = 0; y < gridLength; y++)
+        {
+            for (int x = 0; x < gridLength; x++)
+            {
+                cells[x, y].neighbors = GetNeighbors(x, y);
+            }
+        }
     }
 
     public void GenerateGrid()
