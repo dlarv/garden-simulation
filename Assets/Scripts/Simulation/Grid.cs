@@ -41,13 +41,13 @@ public class Grid : MonoBehaviour
     // and when exiting Play mode.
     void Awake()
     {
-        // Reset grid upon exiting Play mode
-        ClearGrid();
-        GenerateGrid();
+
     }
 
     public void GenerateGrid()
     {
+        ClearGrid();
+
         cells = new Cell[gridLength, gridLength];
 
         for (int y = 0; y < gridLength; y++)
