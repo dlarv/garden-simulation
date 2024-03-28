@@ -9,33 +9,29 @@ using UnityEngine;
  */
 public class DynamicCellBehavior : Cell, ICellBehavior
 {
-    private static RuleSet ruleSet = null;
-
-    public bool changeColor;
-
-    public CellData changeToColor;
+    public bool doChangeState;
+    public CellData changeState;
+    public RuleSetManager manager = null;
+    public RuleSet ruleSet = null;
 
     public void Init()
     {
-        if (ruleSet == null)
-        {
-            FindRuleSet();
-        }
+        FindRuleSet();
     }
 
     void OnValidate()
     {
-        if (changeColor)
+        if (doChangeState)
         {
-            color = changeToColor;
+            currentState = changeState;
 
-            color.CalculateID();
+            currentState.CalculateID();
 
-            SetColor(color);
+            UpdateState(currentState);
 
-            SetNextColor(color);
+            SetNextState(currentState);
 
-            changeColor = false;
+            doChangeState = false;
         }
     }
 
@@ -51,15 +47,12 @@ public class DynamicCellBehavior : Cell, ICellBehavior
                 continue;
 
             CellColorGrid randGrid = results.GetRandomGrid();
-            //int x = Random.Range(0,results.results.Length);
 
             for(int i = 0; i < 9; i++)
             {
                 if(!randGrid.IsNullAt(i))
-                //if(results.GetGrid(x).GetCellColor(i).GetNull() == false)
                 {
                     neighbors.SetColorOf(i, randGrid.GetCellColor(i));
-                    //neighbors.SetColorOf(i, results.GetGrid(x).GetCellColor(i));
                 }
             }
             return;
@@ -67,6 +60,8 @@ public class DynamicCellBehavior : Cell, ICellBehavior
     }
     private void FindRuleSet()
     {
-        ruleSet = GameObject.Find("RuleSet").GetComponent<RuleSet>();
+        //ruleSet = GameObject.Find("RuleSet").GetComponent<RuleSet>();
+        manager = GameObject.Find("RuleSetManager").GetComponent<RuleSetManager>();
+        ruleSet = manager.GetRuleSetFromType(currentState.GetCellType());
     }
 }

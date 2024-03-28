@@ -58,6 +58,7 @@ public class CellData
         return cellType;
     }
 
+    // TODO: Change this method to account for cellType, as needed.
     public bool CompareColors(CellData otherColor)
     {
         CalculateID();

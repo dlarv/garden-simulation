@@ -15,9 +15,9 @@ public class Cell : MonoBehaviour
 {
     public Neighbors neighbors;
     public ICellBehavior behavior;
-    public CellData color;
-    public CellData nextColor;
-    public CellData initialColor;
+    public CellData currentState;
+    public CellData nextState;
+    public CellData initialState;
 
     // When a neighboring cell wants to influence this cell's color, it adds its preferred color into this queue. 
     // The ICellBehavior decides if/how to deal with these requests.
@@ -39,27 +39,27 @@ public class Cell : MonoBehaviour
     }
 
     // Change the gameobject's color.
-    public void SetColor(CellData col)
+    public void UpdateState(CellData col)
     {
         if (!Application.isPlaying)
-            initialColor = col;
+            initialState = col;
 
         material.SetColor("_Color", col.GetCellColor());
-        color = col;
+        currentState = col;
     }
 
-    public void SetNextColor(CellData col)
+    public void SetNextState(CellData col)
     {
-        nextColor = col;
+        nextState = col;
     }
     // Set color back to value it was at during edit mode.
-    public void ResetColor()
+    public void ResetState()
     {
-        SetColor(initialColor);
+        UpdateState(initialState);
     }
-    public CellData GetColor()
+    public CellData GetCurrentState()
     {
-        return color;
+        return currentState;
     }
 
     // Neighboring cells can use this to make requests about what the cell's nextColor should be.
@@ -71,7 +71,7 @@ public class Cell : MonoBehaviour
 
     public void Change()
     {
-        SetColor(nextColor);
+        UpdateState(nextState);
     }
     // Called by Grid to calculate next color.
     // TODO: If colorRequests queue is used, it will most likely be used inside the behavior.Calculate() method.

@@ -20,13 +20,13 @@ public class Neighbors
     // The following two methods are workaround solutions kept here for fast prototyping.
     public CellData GetColor(int index)
     {
-        return cells[index].GetColor();
+        return cells[index].GetCurrentState();
     }
     public void SetColorOf(int index, CellData col)
     {
         if (cells[index] == null)
             return;
-        cells[index].SetNextColor(col);
+        cells[index].SetNextState(col);
     }
 
     // Count number of non-null cells.
@@ -59,7 +59,7 @@ public class Neighbors
         int count = 0;
         foreach (Cell cell in cells)
         {
-            if (cell != null && cell.GetColor().CompareColors(col))
+            if (cell != null && cell.GetCurrentState().CompareColors(col))
                 count++;
         }
         return count;
@@ -72,7 +72,7 @@ public class Neighbors
 
         for (int i = 0; i < cells.Length; i++)
         {
-            if (cells[i] != null && cells[i].GetColor().CompareColors(col))
+            if (cells[i] != null && cells[i].GetCurrentState().CompareColors(col))
                 filtered[i] = cells[i];
         }
         return new Neighbors(filtered);
@@ -85,7 +85,7 @@ public class Neighbors
 
         for (int i = 0; i < cells.Length; i++)
         {
-            if (cells[i] != null && !cells[i].GetColor().CompareColors(col))
+            if (cells[i] != null && !cells[i].GetCurrentState().CompareColors(col))
                 filtered[i] = cells[i];
         }
         return new Neighbors(filtered);
