@@ -204,6 +204,10 @@ public class Grid : MonoBehaviour
             }
         }
 
+        ClearGrid();
+
+        GenerateSavedGrid(returnDataGrid);
+
         return returnDataGrid;
     }
 }
