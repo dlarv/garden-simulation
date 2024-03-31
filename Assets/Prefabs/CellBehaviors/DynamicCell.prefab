@@ -110,16 +110,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-  nextColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-  initialColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-  changeColor: 0
-  changeToColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+  currentState:
+    color: {r: 1, g: 1, b: 1, a: 0}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  nextState:
+    color: {r: 1, g: 1, b: 1, a: 0}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  initialState:
+    color: {r: 1, g: 1, b: 1, a: 0}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 0}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  manager: {fileID: 0}
+  ruleSet: {fileID: 0}

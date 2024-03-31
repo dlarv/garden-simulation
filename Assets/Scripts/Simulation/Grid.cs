@@ -91,6 +91,38 @@ public class Grid : MonoBehaviour
             }
         }
     }
+
+    public void GenerateSavedGrid(CellData[,] savedCells)
+    {
+        ClearGrid();
+
+        gridLength = savedCells.GetLength(0);
+
+        cells = new Cell[gridLength, gridLength];
+
+        for (int y = 0; y < gridLength; y++)
+        {
+            for (int x = 0; x < gridLength; x++)
+            {
+                Cell nextCell = Instantiate(cell, new Vector3(x, y, 0), Quaternion.identity).GetComponent<Cell>();
+
+                nextCell.transform.SetParent(transform);
+
+                nextCell.UpdateState(savedCells[x,y]);
+
+                cells[x, y] = nextCell;
+            }
+        }
+
+
+        for (int y = 0; y < gridLength; y++)
+        {
+            for (int x = 0; x < gridLength; x++)
+            {
+                cells[x, y].neighbors = GetNeighbors(x, y);
+            }
+        }
+    }
     public void ClearGrid()
     {
         cells = null;
@@ -159,5 +191,19 @@ public class Grid : MonoBehaviour
             cell.Change();
     }
 
+    public CellData[,] getGrid()
+    {
+        CellData[,] returnDataGrid = new CellData[gridLength,gridLength];
 
+        for (int y = 0; y < gridLength; y++)
+        {
+            for (int x = 0; x < gridLength; x++)
+            {
+                returnDataGrid[x, y] = cells[x, y].GetCurrentState();
+                Debug.Log(x + "" +  y +"cell " + cells[x, y].GetCurrentState());
+            }
+        }
+
+        return returnDataGrid;
+    }
 }

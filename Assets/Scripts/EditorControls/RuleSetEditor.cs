@@ -11,11 +11,36 @@ public class RuleSetEditor : Editor
 
     public RuleSet ruleset;
 
+    public bool readyToSave;
+
+    public void Awake()
+    {
+
+    }
+
     public override void OnInspectorGUI()
     {
         //base.OnInspectorGUI();
 
         ruleset = (RuleSet)target;
+
+        GUILayout.BeginHorizontal("box");
+
+        readyToSave = GUILayout.Toggle(readyToSave, "", GUILayout.Width(30));
+
+        if (GUILayout.Button("Save Current Grid State") && readyToSave)
+        {
+            readyToSave = false;
+
+            ruleset.SaveGrid();
+        }
+
+        GUILayout.EndHorizontal();
+
+        if (GUILayout.Button("Load Saved Grid State"))
+        {
+            ruleset.LoadGrid();
+        }
 
         for (int i = 0; i < ruleset.rules.Count; i++)
         {
@@ -24,7 +49,7 @@ public class RuleSetEditor : Editor
             for (int j = 0; j < ruleset.rules[i].conditions.Count; j++)
             {
                 RuleCondition currentCondition = ruleset.rules[i].GetCondition(j);
-                GUILayout.Label("Condition " + (j + 1), GUILayout.Height(50));
+                GUILayout.Label("----Condition " + (j + 1), GUILayout.Height(50));
 
                 GUILayout.BeginHorizontal("box");
 
@@ -58,7 +83,7 @@ public class RuleSetEditor : Editor
             for (int j = 0; j < ruleset.rules[i].result.results.Length; j++)
             {
                 CellColorGrid colorGrid = ruleset.rules[i].result.results[j];
-                GUILayout.Label("Result " + (j + 1), GUILayout.Height(40));
+                GUILayout.Label("----Result " + (j + 1), GUILayout.Height(40));
 
                 GUILayout.BeginHorizontal("box");
 

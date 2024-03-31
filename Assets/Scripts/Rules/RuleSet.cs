@@ -9,6 +9,8 @@ using System;
 [Serializable]
 public class RuleSet : MonoBehaviour
 {
+    public CellData[,] savedGrid;
+
     public List<Rule> rules;
     public RuleSet()
     {
@@ -33,5 +35,20 @@ public class RuleSet : MonoBehaviour
     public void RemoveRule(int removeInt)
     {
         rules.RemoveAt(removeInt);
+    }
+
+    public void SaveGrid()
+    {
+        Grid gridScript = GameObject.Find("Grid").GetComponent<Grid>();
+
+        savedGrid = gridScript.getGrid();
+    }
+
+    public void LoadGrid()
+    {
+        Grid gridScript = GameObject.Find("Grid").GetComponent<Grid>();
+
+        gridScript.GenerateSavedGrid(savedGrid);
+
     }
 }
