@@ -170,25 +170,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -226,7 +226,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 568475317}
+  - {fileID: 785169591}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -256,98 +256,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57917027}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &102168909
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default-Material
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords:
-  - _EMISSION
-  m_InvalidKeywords: []
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Detail:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Occlusion:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaTestRef: 0.5
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _EmissionScaleUI: 1
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Lightmapping: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
-    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &110748806
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,25 +303,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  nextColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  initialColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  changeColor: 0
-  data:
+  currentState:
     color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  nextState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  initialState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  doChangeState: 0
+  changeState:
+    color: {r: 0, g: 0, b: 0, a: 0}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -451,7 +359,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1197679751}
+  - {fileID: 558898892}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -481,7 +389,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110748806}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &157303997
+--- !u!21 &167324860
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -620,25 +528,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
+  doChangeState: 0
+  changeState:
     color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -676,7 +584,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1795212287}
+  - {fileID: 240454448}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -706,99 +614,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198522305}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &251083879
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default-Material
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords:
-  - _EMISSION
-  m_InvalidKeywords: []
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Detail:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Occlusion:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaTestRef: 0.5
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _EmissionScaleUI: 1
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Lightmapping: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
-    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
---- !u!21 &274442128
+--- !u!21 &240454448
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -937,25 +753,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -993,7 +809,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 493494465}
+  - {fileID: 1620323078}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1023,7 +839,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313090926}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &316913143
+--- !u!21 &416445599
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1161,55 +977,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rules:
   - conditions:
-    - targets: 
-      op: 1
+    - targets: 04000000
+      op: 0
       color:
-        color: {r: 1, g: 0, b: 0, a: 1}
-        colorID: ff0000
+        color: {r: 1, g: 1, b: 1, a: 1}
+        colorID: ffffff
         isNull: 0
         cellType: 
-      quantity: 1
-      targetString: 
+      quantity: 0
+      targetString: 4
     result:
       results:
       - colorGrid:
-        - color: {r: 0, g: 0, b: 1, a: 1}
+        - color: {r: 0, g: 0, b: 0, a: 0}
           colorID: 
           isNull: 0
           cellType: 
-        - color: {r: 0, g: 0, b: 1, a: 1}
+        - color: {r: 0, g: 0, b: 0, a: 0}
           colorID: 
           isNull: 0
           cellType: 
-        - color: {r: 0, g: 0, b: 1, a: 1}
+        - color: {r: 0, g: 0, b: 0, a: 0}
           colorID: 
           isNull: 0
           cellType: 
-        - color: {r: 0, g: 0, b: 1, a: 1}
+        - color: {r: 0, g: 0, b: 0, a: 0}
           colorID: 
           isNull: 0
           cellType: 
-        - color: {r: 0, g: 0, b: 1, a: 1}
+        - color: {r: 1, g: 0, b: 0, a: 1}
           colorID: 
           isNull: 0
           cellType: 
-        - color: {r: 0, g: 0, b: 1, a: 1}
+        - color: {r: 0, g: 0, b: 0, a: 0}
           colorID: 
           isNull: 0
           cellType: 
-        - color: {r: 0, g: 0, b: 1, a: 1}
+        - color: {r: 0, g: 0, b: 0, a: 0}
           colorID: 
           isNull: 0
           cellType: 
-        - color: {r: 0, g: 0, b: 1, a: 1}
+        - color: {r: 0, g: 0, b: 0, a: 0}
           colorID: 
           isNull: 0
           cellType: 
-        - color: {r: 0, g: 0, b: 1, a: 1}
+        - color: {r: 0, g: 0, b: 0, a: 0}
           colorID: 
           isNull: 0
           cellType: 
---- !u!21 &472623636
+--- !u!21 &500769669
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1301,7 +1117,7 @@ Material:
     - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!21 &493494465
+--- !u!21 &550008676
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1440,25 +1256,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -1496,7 +1312,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 274442128}
+  - {fileID: 936714847}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1573,25 +1389,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  nextColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  initialColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  changeColor: 0
-  data:
+  currentState:
     color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  nextState:
+    color: {r: 0, g: 0, b: 0, a: 0}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  initialState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -1629,7 +1445,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1810573296}
+  - {fileID: 167324860}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1659,7 +1475,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557966250}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &568475317
+--- !u!21 &558898892
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1798,25 +1614,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -1854,7 +1670,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2095966232}
+  - {fileID: 603602302}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1884,7 +1700,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578070477}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &650430441
+--- !u!21 &603602302
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -1976,7 +1792,7 @@ Material:
     - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!21 &666214048
+--- !u!21 &632374141
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -2209,25 +2025,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -2265,7 +2081,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 472623636}
+  - {fileID: 550008676}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2342,25 +2158,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -2398,7 +2214,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 102168909}
+  - {fileID: 416445599}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2428,7 +2244,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742003703}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &744529093
+--- !u!21 &755761321
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -2520,7 +2336,7 @@ Material:
     - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!21 &860266107
+--- !u!21 &785169591
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -2659,25 +2475,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -2715,7 +2531,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 666214048}
+  - {fileID: 2034585460}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2745,6 +2561,98 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873139473}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &916599415
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default-Material
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ValidKeywords:
+  - _EMISSION
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaTestRef: 0.5
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EmissionScaleUI: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Lightmapping: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
+    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &925974861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,25 +2700,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -2848,7 +2756,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2056984348}
+  - {fileID: 632374141}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2925,25 +2833,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -2981,7 +2889,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1007096286}
+  - {fileID: 755761321}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3011,6 +2919,98 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927783177}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &936714847
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default-Material
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ValidKeywords:
+  - _EMISSION
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaTestRef: 0.5
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EmissionScaleUI: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Lightmapping: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
+    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,190 +3095,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &964867373
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default-Material
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords:
-  - _EMISSION
-  m_InvalidKeywords: []
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Detail:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Occlusion:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaTestRef: 0.5
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _EmissionScaleUI: 1
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Lightmapping: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
-    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
---- !u!21 &1007096286
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default-Material
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords:
-  - _EMISSION
-  m_InvalidKeywords: []
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Detail:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Occlusion:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaTestRef: 0.5
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _EmissionScaleUI: 1
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Lightmapping: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
-    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &1007765682
 GameObject:
   m_ObjectHideFlags: 0
@@ -3326,25 +3142,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -3382,7 +3198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 251083879}
+  - {fileID: 1362059249}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3459,25 +3275,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -3515,7 +3331,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 964867373}
+  - {fileID: 1336923318}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3592,25 +3408,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -3648,7 +3464,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 316913143}
+  - {fileID: 1054151975}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3678,6 +3494,190 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046758603}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &1054151975
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default-Material
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ValidKeywords:
+  - _EMISSION
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaTestRef: 0.5
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EmissionScaleUI: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Lightmapping: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
+    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+--- !u!21 &1061472394
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default-Material
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ValidKeywords:
+  - _EMISSION
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaTestRef: 0.5
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EmissionScaleUI: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Lightmapping: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
+    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &1170217196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3725,25 +3725,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -3781,7 +3781,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 157303997}
+  - {fileID: 916599415}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3811,7 +3811,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170217196}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &1197679751
+--- !u!21 &1287891211
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -3903,7 +3903,7 @@ Material:
     - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!21 &1260745222
+--- !u!21 &1336923318
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -3995,7 +3995,7 @@ Material:
     - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!21 &1419948841
+--- !u!21 &1362059249
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -4134,25 +4134,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  nextColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  initialColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  changeColor: 0
-  data:
+  currentState:
     color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  nextState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  initialState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  doChangeState: 0
+  changeState:
+    color: {r: 0, g: 0, b: 0, a: 0}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -4190,7 +4190,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1567619995}
+  - {fileID: 1287891211}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4220,7 +4220,99 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488543832}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &1539519717
+--- !u!21 &1489149150
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default-Material
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ValidKeywords:
+  - _EMISSION
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaTestRef: 0.5
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EmissionScaleUI: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Lightmapping: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
+    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+--- !u!21 &1557460771
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -4359,25 +4451,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
+  doChangeState: 0
+  changeState:
     color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -4415,7 +4507,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1539519717}
+  - {fileID: 1609549799}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4445,7 +4537,140 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559354438}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &1567619995
+--- !u!1 &1580507513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580507514}
+  - component: {fileID: 1580507518}
+  - component: {fileID: 1580507517}
+  - component: {fileID: 1580507516}
+  - component: {fileID: 1580507515}
+  m_Layer: 0
+  m_Name: DynamicCell(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1580507514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580507513}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.275576, y: -21.512358, z: -0.11862771}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2018877146}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1580507515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580507513}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  nextState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  initialState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  doChangeState: 0
+  changeState:
+    color: {r: 0, g: 0, b: 0, a: 0}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  manager: {fileID: 1649655984}
+  ruleSet: {fileID: 430181897}
+--- !u!65 &1580507516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580507513}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1580507517
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580507513}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 1489149150}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1580507518
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580507513}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &1609549799
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -4537,139 +4762,190 @@ Material:
     - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!1 &1580507513
-GameObject:
+--- !u!21 &1620323078
+Material:
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1580507514}
-  - component: {fileID: 1580507518}
-  - component: {fileID: 1580507517}
-  - component: {fileID: 1580507516}
-  - component: {fileID: 1580507515}
-  m_Layer: 0
-  m_Name: DynamicCell(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1580507514
-Transform:
+  m_Name: Default-Material
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ValidKeywords:
+  - _EMISSION
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaTestRef: 0.5
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EmissionScaleUI: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Lightmapping: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
+    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
+--- !u!21 &1633963450
+Material:
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580507513}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.275576, y: -21.512358, z: -0.11862771}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2018877146}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1580507515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580507513}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  nextColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  initialColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
-    isNull: 0
-    cellType: 
-  manager: {fileID: 1649655984}
-  ruleSet: {fileID: 430181897}
---- !u!65 &1580507516
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580507513}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1580507517
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580507513}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 860266107}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1580507518
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580507513}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Default-Material
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ValidKeywords:
+  - _EMISSION
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaTestRef: 0.5
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EmissionScaleUI: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Lightmapping: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
+    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &1649655983
 GameObject:
   m_ObjectHideFlags: 0
@@ -4764,25 +5040,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -4820,7 +5096,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1749567956}
+  - {fileID: 1557460771}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4897,25 +5173,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  nextColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  initialColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  changeColor: 0
-  data:
+  currentState:
     color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  nextState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  initialState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -4953,7 +5229,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1419948841}
+  - {fileID: 1953185073}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5030,25 +5306,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -5086,7 +5362,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 650430441}
+  - {fileID: 500769669}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5116,98 +5392,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736358424}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &1749567956
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default-Material
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords:
-  - _EMISSION
-  m_InvalidKeywords: []
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Detail:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Occlusion:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaTestRef: 0.5
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _EmissionScaleUI: 1
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Lightmapping: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
-    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &1772403673
 GameObject:
   m_ObjectHideFlags: 0
@@ -5255,25 +5439,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  nextColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  initialColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  changeColor: 0
-  data:
+  currentState:
     color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  nextState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  initialState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -5311,7 +5495,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1260745222}
+  - {fileID: 1781673529}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5341,99 +5525,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772403673}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &1795212287
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default-Material
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords:
-  - _EMISSION
-  m_InvalidKeywords: []
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Detail:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Occlusion:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaTestRef: 0.5
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _EmissionScaleUI: 1
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Lightmapping: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
-    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
---- !u!21 &1810573296
+--- !u!21 &1781673529
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -5572,25 +5664,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  nextColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  initialColor:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
-    isNull: 0
-    cellType: 
-  changeColor: 0
-  data:
+  currentState:
     color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  nextState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  initialState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
+    isNull: 0
+    cellType: 
+  doChangeState: 0
+  changeState:
+    color: {r: 0, g: 0, b: 0, a: 0}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -5628,7 +5720,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 744529093}
+  - {fileID: 1633963450}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5658,6 +5750,98 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850145268}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &1953185073
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default-Material
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ValidKeywords:
+  - _EMISSION
+  m_InvalidKeywords: []
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaTestRef: 0.5
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EmissionScaleUI: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Lightmapping: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
+    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &2018877145
 GameObject:
   m_ObjectHideFlags: 0
@@ -5775,7 +5959,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &2047867799
+--- !u!21 &2034585460
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -5914,25 +6098,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e623c52122823cb419e1c392ae7c6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color:
+  currentState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  nextColor:
+  nextState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  initialColor:
+  initialState:
     color: {r: 1, g: 1, b: 1, a: 1}
-    colorID: 
+    colorID: ffffff
     isNull: 0
     cellType: 
-  changeColor: 0
-  data:
-    color: {r: 0, g: 0, b: 0, a: 0}
-    colorID: 
+  doChangeState: 0
+  changeState:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    colorID: ffffff
     isNull: 0
     cellType: 
   manager: {fileID: 1649655984}
@@ -5970,7 +6154,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2047867799}
+  - {fileID: 1061472394}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6000,187 +6184,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054459583}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &2056984348
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default-Material
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords:
-  - _EMISSION
-  m_InvalidKeywords: []
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Detail:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Occlusion:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaTestRef: 0.5
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _EmissionScaleUI: 1
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Lightmapping: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
-    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
---- !u!21 &2095966232
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default-Material
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords:
-  - _EMISSION
-  m_InvalidKeywords: []
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Detail:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Occlusion:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _AlphaTestRef: 0.5
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _EmissionScaleUI: 1
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Lightmapping: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0.99999994}
-    - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
